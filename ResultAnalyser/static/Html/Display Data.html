@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,7 @@
             background-image: linear-gradient(110deg,
                     rgba(58, 58, 58, 0.6),
                     rgba(55, 108, 88, 0.5)),
-                url('https://image.slidesdocs.com/responsive-images/background/an-image-of-data-center-facilities-powerpoint-background_cf60ce2734__960_540.jpg');
+                url("{% static 'Images/Background1.jpg' %}");
             background-position: bottom;
             background-size: cover;
             background-repeat: no-repeat;
@@ -130,7 +131,7 @@
             background-image: linear-gradient(110deg,
                     rgba(0, 0, 0, 0.4),
                     rgba(15, 18, 8, 0.6)),
-                url('https://st4.depositphotos.com/1741969/29457/i/450/depositphotos_294571810-stock-photo-blackground-of-abstract-glitter-lights.jpg');
+                url("{% static 'Images/Background2.jpg' %}");
             background-position: bottom;
             background-size: cover;
             background-repeat: no-repeat;
@@ -230,7 +231,7 @@
             background-image: linear-gradient(110deg,
                     rgba(0, 0, 0, 0.5),
                     rgba(15, 18, 8, 0.5)),
-                url('https://media.istockphoto.com/id/1623303770/photo/creative-background-image-is-blurred-evening-city-lights-and-light-snowfall.jpg?b=1&s=612x612&w=0&k=20&c=--I6QisPR7yGmgujOI2co8U3FIK5tBv6xAjMup67ghc=');
+                url("{% static 'Images/Background3.jpg' % }");
             background-position: bottom;
             background-size: cover;
             background-repeat: no-repeat;
@@ -313,7 +314,7 @@
             background-image: linear-gradient(110deg,
                     rgba(0, 0, 0, 0.5),
                     rgba(15, 18, 8, 0.5)),
-                url('https://img.freepik.com/free-vector/realistic-neon-lights-background_23-2148907367.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1712880000&semt=ais');
+                url("{% static 'Images/Background4.jpg' %}");
             background-position: bottom;
             background-size: cover;
             background-repeat: no-repeat;
@@ -764,7 +765,8 @@
         }
 
         document.getElementById("confirm-values").addEventListener("click", function () {
-            window.history.back();
+            //window.opener.postMessage('confirmed', '*');
+            window.close();
         });
 
         closeBtn.forEach(function (btn) {
